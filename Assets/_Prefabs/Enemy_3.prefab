@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5020281281144239692}
   - component: {fileID: 5020281281144239795}
   - component: {fileID: 5020281281144239794}
-  - component: {fileID: 5020281281144239693}
+  - component: {fileID: 212146831386274562}
   m_Layer: 9
   m_Name: CockpitL
   m_TagString: Untagged
@@ -78,8 +78,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &5020281281144239693
-SphereCollider:
+--- !u!136 &212146831386274562
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -88,8 +88,9 @@ SphereCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
   m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5020281281200978664
 GameObject:
@@ -102,7 +103,7 @@ GameObject:
   - component: {fileID: 5020281281200978665}
   - component: {fileID: 5020281281200978668}
   - component: {fileID: 5020281281200978671}
-  - component: {fileID: 5020281281200978670}
+  - component: {fileID: 6672503133952951798}
   m_Layer: 9
   m_Name: Wing
   m_TagString: Untagged
@@ -169,8 +170,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &5020281281200978670
-SphereCollider:
+--- !u!136 &6672503133952951798
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -179,8 +180,9 @@ SphereCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
   m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 0
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5020281281650957854
 GameObject:
@@ -193,7 +195,7 @@ GameObject:
   - component: {fileID: 5020281281650957855}
   - component: {fileID: 5020281281650957826}
   - component: {fileID: 5020281281650957853}
-  - component: {fileID: 5020281281650957852}
+  - component: {fileID: 2478417983074528902}
   m_Layer: 9
   m_Name: CockpitR
   m_TagString: Untagged
@@ -260,8 +262,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &5020281281650957852
-SphereCollider:
+--- !u!136 &2478417983074528902
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -270,8 +272,9 @@ SphereCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
   m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5020281282738300868
 GameObject:
@@ -283,6 +286,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5020281282738300869}
   - component: {fileID: 8209586122324288369}
+  - component: {fileID: 4025603240222612557}
+  - component: {fileID: 2654459982118197189}
   m_Layer: 9
   m_Name: Enemy_3
   m_TagString: Enemy
@@ -323,3 +328,50 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
+--- !u!114 &4025603240222612557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5020281282738300868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b13b9a0a0ce19da458f28404f31dbd98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  fireRate: 0.3
+  health: 5
+  score: 100
+  showDamageDuration: 0.1
+  powerUpDropChance: 0.75
+  originalColors: []
+  materials: []
+  showingDamage: 0
+  damageDoneTime: 0
+  notifiedOfDestruction: 0
+  lifeTime: 5
+  points: []
+  birthTime: 0
+--- !u!114 &2654459982118197189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5020281282738300868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a236ac43f18b009408797e426bfb2043, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 2.5
+  keepOnScreen: 0
+  isOnScreen: 1
+  camWidth: 0
+  camHeight: 0
+  offRight: 0
+  offLeft: 0
+  offUp: 0
+  offDown: 0
